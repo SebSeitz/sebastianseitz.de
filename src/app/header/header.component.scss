@@ -1,0 +1,26 @@
+p {
+    color: white;
+}
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 350px;
+    margin-right: 350px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding-right: 30px;
+    }
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+}
