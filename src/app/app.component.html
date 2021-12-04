@@ -1,2 +1,2 @@
-<app-header></app-header>
-<app-introduction></app-introduction>
+<app-header [alternativeMode]="router.url !== '/'"></app-header>
+<router-outlet></router-outlet>

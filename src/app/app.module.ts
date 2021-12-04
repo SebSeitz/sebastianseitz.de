@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { HeaderComponent } from './header/header.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroductionComponent,
-    HeaderComponent
+    HeaderComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,
