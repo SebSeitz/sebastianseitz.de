@@ -1,6 +1,6 @@
 .profile-pic {
-    height: 250px;
-    width: 250px;
+    height: 280px;
+    width: 280px;
     border-radius: 50%;
     margin-right: 25px;
     object-fit: cover;
@@ -9,14 +9,14 @@
 }
 
 .top-container {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: space-between;
     margin-left: 250px;
     margin-right: 250px;
-
+    align-items: center;
+    
     .p1 {
         color: white;
         font-size: 45px;
@@ -25,11 +25,75 @@
 }
 
 .pink {
-    color: rgb(206, 221, 100);
+    color: #fa2759;
     padding-right: 8px;
     font-weight: 600;
 }
 
+.introduction-container {
+    display: flex;
+}
+
 .name-container {
     display: flex;
+}
+
+.contact-button {
+    color: transparent;
+    color: #2dfcd8;
+    border: 3px solid #2dfcd8;
+    width: 280px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px;
+    position: absolute;
+    bottom: 90px;
+    cursor: pointer;
+    box-shadow: 1px 1.5px 1px 1.5px;
+
+    &:hover {
+        background-color: #2dfcd8;
+        color: white;
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+    }
+}
+
+.arrow-down {
+    z-index: 99;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+@media (max-width: 1286px) {
+    .profile-pic {
+        height: 180px;
+        width: 180px;
+    }
+
+    .top-container {
+        .p1 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media(max-width: 1000px){
+    .top-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-pic{
+        margin-bottom: 30px;
+    }
 }

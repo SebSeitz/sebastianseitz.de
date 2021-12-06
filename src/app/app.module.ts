@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { HeaderComponent } from './header/header.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { MyskillsComponent } from './myskills/myskills.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroductionComponent,
     HeaderComponent,
-    ImprintComponent
+    ImprintComponent,
+    MyskillsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
