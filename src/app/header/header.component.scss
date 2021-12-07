@@ -11,8 +11,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 20vw;
+    margin-right: 20vw;
 
     a {
         color: white;
@@ -34,19 +34,26 @@ header {
     }
 }
 
-
-@media (max-width: 1286px){
+@media (max-width: 1130px) {
     header {
         a {
-            font-size: 14px;
+            font-size: 16px;
         }
     }
-
 }
-@media (max-width: 1000px) {
+
+@media (max-width: 1015px) {
     header {
         a {
             display: none;
         }
+    }
+
+    .dropDown-menu {
+        display: flex !important;
+        height: 38px !important;
+        width: 38px !important;
+        -webkit-filter: invert(1);
+        filter: invert(1);
     }
 }
