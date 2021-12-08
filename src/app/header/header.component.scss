@@ -3,10 +3,6 @@ p {
 }
 
 header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
     height: 100px;
     display: flex;
     align-items: center;
@@ -55,5 +51,12 @@ header {
         width: 38px !important;
         -webkit-filter: invert(1);
         filter: invert(1);
+    }
+}
+
+@media (max-width: 430px) {
+    header{
+        margin-left: 9vw;
+        margin-right: 9vw;
     }
 }
