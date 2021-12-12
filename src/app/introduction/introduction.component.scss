@@ -16,13 +16,7 @@
     margin-left: 20vw;
     margin-right: 20vw;
     align-items: flex-start;
-    margin-top: 80px;
-
-    .p1 {
-        color: white;
-        font-size: 45px;
-        font-weight: 600;
-    }
+    padding-top: 100px;
 }
 
 .pink {
@@ -33,6 +27,15 @@
 
 .introduction-container {
     display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+
+    p {
+        font-size: 45px;
+        margin-top: 0;
+    }
 }
 
 .name-container {
@@ -40,15 +43,13 @@
 }
 
 .contact-button {
-    color: transparent;
+    background-color: transparent;
     color: #2dfcd8;
     border: 3px solid #2dfcd8;
     width: 280px;
     font-size: 18px;
     font-weight: 600;
     padding: 30px;
-    position: absolute;
-    bottom: 90px;
     cursor: pointer;
     box-shadow: 1px 1.5px 1px 1.5px;
 
@@ -82,8 +83,12 @@
     }
 
     .top-container {
-        .p1 {
-            font-size: 38px;
+        align-items: flex-start;
+    }
+
+    .introduction-container {
+        p {
+            font-size: 35px;
         }
     }
 }
@@ -108,6 +113,12 @@
         justify-content: flex-start;
     }
 
+    .introduction-container {
+        min-width: -webkit-fill-available;
+        align-items: stretch;
+        text-align: center;
+    }
+
     .profile-pic {
         margin-left: 0;
         margin-right: 0;
@@ -118,11 +129,16 @@
     .arrow-down {
         display: none;
     }
+
+    .contact-button {
+        width: unset;
+    }
 }
 
 @media (max-width: 430px) {
     .top-container {
         margin-left: 0;
         margin-right: 0;
+        font-size: 35px;
     }
 }
