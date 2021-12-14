@@ -9,6 +9,7 @@ export class MyworkComponent implements OnInit {
   javascript = true;
   showAll = true;
   showMore = false;
+  hoverOver = false;
 
 
   showAllWorks(){

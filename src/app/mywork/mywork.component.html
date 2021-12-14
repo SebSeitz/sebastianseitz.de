@@ -9,13 +9,25 @@
 
     <div class="preview-container">
         <div class="top-row">
-            <div class="showQuiz" *ngIf = "showMore">Try it out</div>
-            <img *ngIf="javascript || showAll" (mouseover)="showMore = true" (mouseleave)="showMore = false" src="assets/img/quizzapp.png">
+            <div class="showQuiz" *ngIf="showMore">Try it out</div>
+            <img *ngIf="javascript || showAll" (mouseover)="showMore = true" (mouseleave)="showMore = false"
+                src="assets/img/quizzapp.png">
             <img *ngIf="javascript || showAll" src="assets/img/elpolloloco.png">
         </div>
         <div class="bottom-row">
             <img *ngIf="javascript || showAll" src="assets/img/pokedex.png">
-            <img *ngIf="!javascript || showAll"src="assets/img/music.jpg">
+            <img *ngIf="!javascript || showAll" src="assets/img/music.jpg">
+        </div>
+        <div class="bottom-row">
+            <div class="quiz">
+                <div class="tryOut" *ngIf ="hoverOver">API based pokedex
+                    <a href="#">Try it out</a>
+                </div>
+                <img [class.transparent]="hoverOver" (mouseover)="hoverOver = true" (mouseleave)="hoverOver = false"
+                    *ngIf="javascript || showAll" src="assets/img/pokedex.png">
+            </div>
+
+            <img *ngIf="!javascript || showAll" src="assets/img/music.jpg">
         </div>
 
     </div>
