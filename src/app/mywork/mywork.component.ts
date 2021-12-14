@@ -6,8 +6,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mywork.component.scss']
 })
 export class MyworkComponent implements OnInit {
+  javascript = true;
+  showAll = true;
+  showMore = false;
 
-  constructor() { }
+
+  showAllWorks(){
+    this.showAll = true;
+  }
+
+  showAngular(){
+    this.javascript = false;
+    this.showAll = false;
+  }
+
+  showJavascript(){
+    this.javascript = true;
+    this.showAll = false
+  }
+
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

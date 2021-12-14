@@ -30,3 +30,24 @@ h1 {
         }
     }
 }
+
+.showQuiz{
+    color: white;
+}
+
+.preview-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        height: 200px;
+        width: 200px;
+        padding: 20px;
+        object-fit: cover;
+    }
+}
+
+.d-none{
+    display: none;
+}
