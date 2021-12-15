@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MyworkComponent implements OnInit {
   javascript = true;
   showAll = true;
-  showMore = false;
   hoverOver = false;
+  showQuiz = false;
+  showGame = false;
+  showPokedex = false;
+  showMusicApp = false;
 
 
   showAllWorks(){
