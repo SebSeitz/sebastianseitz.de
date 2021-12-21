@@ -10,6 +10,8 @@ import { MyskillsComponent } from './myskills/myskills.component';
 import { HomeComponent } from './home/home.component';
 import { MyworkComponent } from './mywork/mywork.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { ContactformComponent } from './contactform/contactform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
     MyskillsComponent,
     HomeComponent,
     MyworkComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    ContactformComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

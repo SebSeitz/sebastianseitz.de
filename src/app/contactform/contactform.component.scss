@@ -1,0 +1,56 @@
+.contactform-container{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: #2dfcd8;
+    font-size: 45px;
+}
+
+span {
+    color: #2dfcd8;;
+}
+
+form{
+    width: 500px;
+
+}
+
+.contactform-text{
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+.contact-button{
+    width: 170px;
+    height: 65px;
+    text-align: center;
+    line-height: 7px;
+}
+
+label{
+    margin-bottom: 8px;
+}
+
+input{
+    background-color: #1a1a1a;
+    color: white;
+    height: 18px;
+}
+
+.button-container{
+    display: flex;
+    align-items: flex-end;
+
+}
+
