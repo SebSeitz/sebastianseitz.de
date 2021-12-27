@@ -35,6 +35,14 @@ form {
     height: 65px;
     text-align: center;
     line-height: 7px;
+
+    &:hover{
+        cursor: no-drop;
+    }
+
+    &:not([disabled]):hover {
+        cursor: pointer;
+    }
 }
 
 label {
@@ -59,6 +67,7 @@ input {
     color: white;
     height: 18px;
     font-family: 'Inter', sans-serif;
+    padding-left: 5px;
 }
 
 textarea{
