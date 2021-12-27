@@ -1,5 +1,5 @@
-.contactform-container{
-    height: 70vh;
+.contactform-container {
+    height: 80vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -12,45 +12,66 @@ p {
     flex-direction: column;
 }
 
-h1{
+h1 {
     color: #2dfcd8;
     font-size: 45px;
 }
 
 span {
-    color: #2dfcd8;;
+    color: #2dfcd8;
 }
 
-form{
+form {
     width: 500px;
-
 }
 
-.contactform-text{
+.contactform-text {
     width: 500px;
     margin-bottom: 15px;
 }
 
-.contact-button{
+.contact-button {
     width: 170px;
     height: 65px;
     text-align: center;
     line-height: 7px;
 }
 
-label{
+label {
     margin-bottom: 8px;
 }
 
-input{
+.alert {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: white;
+    background-color: rgb(219, 41, 41);
+}
+
+input {
     background-color: #1a1a1a;
     color: white;
     height: 18px;
+    font-family: 'Inter', sans-serif;
 }
 
-.button-container{
+textarea{
+    background-color: #1a1a1a;
+    color: white;
+    height: 75px;
+    resize: none;
+    border-style: inset;
+    border-width: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+.button-container {
     display: flex;
     align-items: flex-end;
-
 }
-

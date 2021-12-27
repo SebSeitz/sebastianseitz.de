@@ -1,0 +1,27 @@
+.footer-container {
+    width: 100vw;
+    height: 20vh;
+    background-color: white;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imprint-container {
+    padding-left: 20vw;
+}
+
+.social-media-container {
+    padding-right: 20vw;
+}
+
+a {
+    color: #1a1a1a;
+
+    &:hover {
+        color: #2dfcd8;
+    }
+}

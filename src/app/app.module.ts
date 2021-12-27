@@ -12,6 +12,8 @@ import { MyworkComponent } from './mywork/mywork.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ContactformComponent } from './contactform/contactform.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     MyworkComponent,
     AboutmeComponent,
-    ContactformComponent
+    ContactformComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

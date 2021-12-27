@@ -8,27 +8,66 @@
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
         <p>
             <label for="firstname">First Name</label>
-            <input type="text" placeholder="Enter Your First Name" id="firstname" name="firstname" ngModel >
+            <input type="text" #nameRef="ngModel" minlength="4" required class="form-control"
+                placeholder="Enter Your First Name" id="firstname" name="firstname" ngModel>
         </p>
+        <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert">
+            <div [hidden]="!nameRef.errors?.['required']">
+                Please enter a name
+            </div>
+            <div [hidden]="!nameRef.errors?.['minlength']">
+                Please enter at least 4 characters
+            </div>
+        </div>
+
 
         <p>
             <label for="lastname">Last Name</label>
-            <input type="text" placeholder="Enter Your Last Name" id="lastname" name="lastname" ngModel>
+            <input type="text" #lastNameRef="ngModel" minlength="4" required class="form-control"
+                placeholder="Enter Your Last Name" id="lastname" name="lastname" ngModel>
         </p>
+        <div *ngIf="lastNameRef.errors && (lastNameRef.dirty || lastNameRef.touched)" class="alert">
+            <div [hidden]="!lastNameRef.errors?.['required']">
+                Please enter a name
+            </div>
+            <div [hidden]="!lastNameRef.errors?.['minlength']">
+                Please enter at least 4 characters
+            </div>
+        </div>
 
         <p>
             <label for="email">Email </label>
-            <input type="text" placeholder="Enter Your e-mail address"id="email" name="email" ngModel>
+            <input type="text" #refEmailPattern="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                class="form-control" placeholder="Enter Your e-mail address" id="email" name="email" ngModel>
         </p>
+        <div *ngIf="refEmailPattern.errors && (refEmailPattern.dirty || refEmailPattern.touched)" class="alert">
+            <div [hidden]="!refEmailPattern.errors?.['pattern']">
+                This is not a valid e-mail
+            </div>
+        </div>
+        <p>
+            <label for="message">Message </label>
+            <textarea type="text" #refMessage="ngModel" minlength="20" maxlength="200" required class="form-control"
+                class="form-control" placeholder="Enter your message to me" id="message" name="message" ngModel>
+            </textarea>
+        </p>
+        <div *ngIf="refMessage.errors && (refMessage.dirty || refMessage.touched)" class="alert">
+            <div [hidden]="!refMessage.errors?.['required']">
+                Please enter a message
+            </div>
+
+            <div [hidden]="!refMessage.errors?.['minlength']">
+                Please enter at least 20 characters
+            </div>
+            <div [hidden]="!refMessage.errors?.['maxlength']">
+                Character limit reached
+            </div>
+        </div>
+
 
         <p class="button-container">
             <button class="contact-button" type="submit">Send</button>
         </p>
-
-        <pre>Value : {{contactForm.value | json }} </pre>
-        <pre>Valid : {{contactForm.valid}} </pre>
-        <pre>Touched : {{contactForm.touched  }} </pre>
-        <pre>Submitted : {{contactForm.submitted  }} </pre>
 
     </form>
 
