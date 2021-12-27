@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: black;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     overflow-x: hidden;
 }
 
@@ -26,7 +26,7 @@ body {
     cursor: pointer;
     box-shadow: 1px 1.5px 1px 1.5px;
 
-    &:hover {
+    &:not([disabled]):hover {
         background-color: #2dfcd8;
         color: white;
         transition: all 0.4s ease;
@@ -46,4 +46,3 @@ a {
         color: #fa2759;
     }
 }
-

@@ -5,10 +5,10 @@
         <span>Get in touch with me via the contact form below</span>
     </div>
 
-    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)" novalidate>
         <p>
             <label for="firstname">First Name</label>
-            <input type="text" #nameRef="ngModel" minlength="4" required class="form-control"
+            <input type="text" #nameRef="ngModel" minlength="4" required
                 placeholder="Enter Your First Name" id="firstname" name="firstname" ngModel>
         </p>
         <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert">
@@ -23,7 +23,7 @@
 
         <p>
             <label for="lastname">Last Name</label>
-            <input type="text" #lastNameRef="ngModel" minlength="4" required class="form-control"
+            <input type="text" #lastNameRef="ngModel" minlength="4" required
                 placeholder="Enter Your Last Name" id="lastname" name="lastname" ngModel>
         </p>
         <div *ngIf="lastNameRef.errors && (lastNameRef.dirty || lastNameRef.touched)" class="alert">
@@ -37,8 +37,8 @@
 
         <p>
             <label for="email">Email </label>
-            <input type="text" #refEmailPattern="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                class="form-control" placeholder="Enter Your e-mail address" id="email" name="email" ngModel>
+            <input type="text" #refEmailPattern="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                 placeholder="Enter Your e-mail address" id="email" name="email" ngModel>
         </p>
         <div *ngIf="refEmailPattern.errors && (refEmailPattern.dirty || refEmailPattern.touched)" class="alert">
             <div [hidden]="!refEmailPattern.errors?.['pattern']">
@@ -47,8 +47,8 @@
         </div>
         <p>
             <label for="message">Message </label>
-            <textarea type="text" #refMessage="ngModel" minlength="20" maxlength="200" required class="form-control"
-                class="form-control" placeholder="Enter your message to me" id="message" name="message" ngModel>
+            <textarea type="text" #refMessage="ngModel" minlength="20" maxlength="200" required 
+                 placeholder="Enter your message to me" id="message" name="message" ngModel>
             </textarea>
         </p>
         <div *ngIf="refMessage.errors && (refMessage.dirty || refMessage.touched)" class="alert">
@@ -66,9 +66,8 @@
 
 
         <p class="button-container">
-            <button class="contact-button" type="submit">Send</button>
+            <button [disabled]="!contactForm.form.valid" class="contact-button" type="submit">Send</button>
         </p>
-
     </form>
 
 </div>
