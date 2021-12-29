@@ -11,6 +11,7 @@ export class ContactformComponent implements OnInit {
 
   onSubmit(value: any) {
     console.log(value);
+    alert('your messaged has been forwarded');
   }
 
   constructor() { }
