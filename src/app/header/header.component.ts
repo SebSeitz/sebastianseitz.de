@@ -6,6 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  scroll(selector: string) {
+    const element = document.querySelector(selector);
+    element ? element.scrollIntoView({behavior: "smooth"}): null;
+}
   @Input() alternativeMode = true;
   constructor() { }
 
