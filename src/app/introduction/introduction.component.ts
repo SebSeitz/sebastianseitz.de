@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent implements OnInit {
+  scroll(el: HTMLElement){
+    el.scrollIntoView();
+  }
 
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }
