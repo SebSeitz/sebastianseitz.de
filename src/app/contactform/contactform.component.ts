@@ -19,10 +19,10 @@ export class ContactformComponent implements OnInit {
     alert('your messaged has been forwarded');
     let url = 'http://sebastian-seitz.developerakademie.com/send_mail.php';
     let formData = new FormData();
-    formData.append('firstname', 'Sebastian');
-    formData.append('lastname', 'Seitz');
-    formData.append('email', 'this.email');
-    formData.append('message', 'this.message');
+    formData.append('firstname', `${this.firstname}`);
+    formData.append('lastname', `${this.lastname}`);
+    formData.append('email', `${this.email}`);
+    formData.append('message', `${this.message}`);
     let resp = await fetch(url, { method: 'POST' , body: formData});
     console.log('Received answer', resp);
 
