@@ -21,8 +21,8 @@ export class ContactformComponent implements OnInit {
     let formData = new FormData();
     formData.append('firstname', 'Sebastian');
     formData.append('lastname', 'Seitz');
-    formData.append('email', 'mymail');
-    formData.append('message', 'its me');
+    formData.append('email', 'this.email');
+    formData.append('message', 'this.message');
     let resp = await fetch(url, { method: 'POST' , body: formData});
     console.log('Received answer', resp);
 

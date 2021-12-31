@@ -39,7 +39,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
 
-        $subject = "Contact From " . $_POST['email'] + ['firstname'] + ['lastname'];
+        $subject = "Contact From " . $_POST['firstname'];
         $headers = "From:  noreply@developerakademie.com";
 
         mail($recipient, $subject, $_POST['message'], $_POST['email'], $headers);
