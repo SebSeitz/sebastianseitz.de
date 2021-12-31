@@ -3,6 +3,8 @@
     background-color: #1a1a1a;
     padding-left: 20vw;
     padding-right: 20vw;
+    padding-bottom: 70px;
+    padding-top: 40px;
 }
 
 .aboutme-top-section {
@@ -42,6 +44,8 @@
 
 .profile-pic {
     margin-left: 0;
+    height: 270px;
+    width: 270px;
 }
 .image-container {
     height: 280px;
@@ -54,7 +58,7 @@
 
 .aboutme-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 50px;
     align-items: center;
 }
