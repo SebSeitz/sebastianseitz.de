@@ -55,5 +55,22 @@ h1{
         background-color: white;
         height: 70px;
     }
+}
 
+
+    @media (max-width: 1300px){
+        .skill{
+            width: 170px;
+            height: 55px;
+        }
+        .skill-section{
+            font-size: 45px;
+        }
+}
+
+@media (max-width: 1015px){
+    .skill{
+        width: 130px;
+        height: 35px;
+    }
 }

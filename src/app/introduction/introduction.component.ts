@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent implements OnInit {
+  scroll(selector: string) {
+    const element = document.querySelector(selector);
+    element ? element.scrollIntoView({behavior: "smooth"}): null;
+}
 
   constructor() {
 

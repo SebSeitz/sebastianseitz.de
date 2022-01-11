@@ -66,8 +66,8 @@
         flex-direction: unset;
     }
     .profile-pic {
-        height: 265px;
-        width: 265px;
+        height: 265px !important;
+        width: 265px !important;
     }
 
 
@@ -76,6 +76,13 @@
         p {
             font-size: 30px;
         }
+    }
+
+    .contact-button{
+        width: 200px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 30px;
     }
 }
 
@@ -86,8 +93,8 @@
     }
 
     .introduction-container {
-        .p1 {
-            font-size: 32px;
+        p {
+            font-size: 24px;
         }
     }
 }

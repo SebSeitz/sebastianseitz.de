@@ -1,11 +1,11 @@
-<div class="contactform-container" #contactformsection>
+<div class="contactform-container" id="contactformsection">
 
     <div class="contactform-text">
         <h1>Contact Me</h1>
         <span>Get in touch with me via the contact form below</span>
     </div>
 
-    <form action="http://sebastian-seitz.developerakademie.com/send_mail.php" method="POST" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)" novalidate>
+    <form action="http://sebastian-seitz.developerakademie.com/send_mail.php" method="POST" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value); contactForm.resetForm()" novalidate>
         <p>
             <label for="firstname">First Name</label>
             <input type="text" #nameRef="ngModel" minlength="4" required
@@ -41,6 +41,9 @@
                  placeholder="Enter Your e-mail address" id="email" name="email" [(ngModel)]="email">
         </p>
         <div *ngIf="refEmailPattern.errors && (refEmailPattern.dirty || refEmailPattern.touched)" class="alert">
+            <div [hidden]="!refEmailPattern.errors?.['required']">
+                Please enter an e-mail address
+            </div>
             <div [hidden]="!refEmailPattern.errors?.['pattern']">
                 This is not a valid e-mail
             </div>
