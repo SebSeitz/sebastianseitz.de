@@ -1,5 +1,4 @@
 .skills-section{
-    height: 100vh;
     background-color: #1A1A1A;
     color: white;
     display: flex;
@@ -23,7 +22,8 @@ h1{
 
 .skills-row {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    min-width: 60vw;
 }
 
 .skill{
@@ -60,8 +60,8 @@ h1{
 
     @media (max-width: 1300px){
         .skill{
-            width: 170px;
-            height: 55px;
+            width: 140px;
+            height: 40px;
         }
         .skill-section{
             font-size: 45px;
