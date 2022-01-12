@@ -9,6 +9,13 @@
 
     </div>
 
-    <img class="dropDown-menu" src="assets/img/menu1.png" style="display: none;">
+    <img (click)="openCloseMenu()" class="dropDown-button" src="assets/img/menu1.png" style="display: none;">
+    <div  *ngIf="menuIsOpen" class="dropDownMenu">
+        <a href="index.html">Home</a>
+        <a href="index.html#day-menu-section">About</a>
+        <a href="send-mail.html">Portfolio</a>
+
+    </div>
 
 </header>
+

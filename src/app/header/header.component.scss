@@ -19,6 +19,40 @@ header {
     }
 }
 
+.dropDownMenu {
+    background-color: black;
+    position: absolute;
+    right: 20vw;
+    display: flex !important;
+    flex-direction: column;
+    top: 85px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    opacity: 0.4;
+    z-index: 99 !important;
+    border: 5px solid #2dfcd8;
+}
+
+.dropDownMenu a {
+    text-decoration: none;
+    color: #fa2759;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px;
+    padding-right: 5px;
+    display: flex;
+    align-self: flex-end;
+    border-bottom: 5px solid transparent;
+}
+
+.dropDownMenu a:hover {
+    color: green;
+    border-bottom: 5px solid green;
+}
+
+
 @media (max-width: 1130px) {
     header {
         a {
@@ -34,7 +68,7 @@ header {
         }
     }
 
-    .dropDown-menu {
+    .dropDown-button {
         display: flex !important;
         height: 38px !important;
         width: 38px !important;
@@ -42,6 +76,7 @@ header {
         filter: invert(1);
     }
 }
+
 
 @media (max-width: 430px) {
     header{

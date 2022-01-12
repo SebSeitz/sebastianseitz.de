@@ -9,8 +9,21 @@ export class HeaderComponent implements OnInit {
 
   scroll(selector: string) {
     const element = document.querySelector(selector);
-    element ? element.scrollIntoView({behavior: "smooth"}): null;
-}
+    element ? element.scrollIntoView({ behavior: "smooth" }) : null;
+  }
+
+ menuIsOpen = false;
+ openCloseMenu() {
+    if (!this.menuIsOpen) {
+      this.menuIsOpen=true;
+    }
+    else {
+      this.menuIsOpen=false;
+    }
+
+  }
+
+
   @Input() alternativeMode = true;
   constructor() { }
 
