@@ -78,3 +78,37 @@ h1 {
     color: white;
     margin-top: 0;
 }
+
+@media(max-width: 730px){
+    .aboutme-container{
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .aboutme-top-section {
+        height:auto;
+
+    }
+
+    .aboutme-bottom-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme-text{
+        margin-bottom: 20px;
+    }
+
+    .image-container{
+        margin-right: 0;
+    }
+
+    h1{
+        font-size: 25px !important;
+        text-align: center;
+    }
+
+    .myJourney-container{
+        margin-bottom: 20px;
+    }
+}
