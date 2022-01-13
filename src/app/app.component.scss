@@ -1,5 +1,10 @@
-.container {
+.container{
+    overflow-x: hidden;
     padding-left: 20vw;
     padding-right: 20vw;
     padding-top: 120px;
+}
+
+.main-container{
+    overflow-x: hidden;
 }

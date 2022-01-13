@@ -28,10 +28,27 @@ header {
     top: 85px;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
-    opacity: 0.4;
     z-index: 99 !important;
     border: 5px solid #2dfcd8;
+    animation: slideIn 0.5s ease-in-out;
+    height: 150px;
+    opacity: 0.8;
+
 }
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      visibility: hidden;
+      height: 0px;
+    }
+    to {
+      visibility: visible;
+      height: 150px;
+    }
+  }
+
+
 
 .dropDownMenu a {
     text-decoration: none;
@@ -48,8 +65,8 @@ header {
 }
 
 .dropDownMenu a:hover {
-    color: green;
-    border-bottom: 5px solid green;
+    color: #2dfcd8;
+    border-bottom: 5px solid #2dfcd8;
 }
 
 
