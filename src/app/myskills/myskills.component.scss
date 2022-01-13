@@ -1,5 +1,5 @@
-.skills-section{
-    background-color: #1A1A1A;
+.skills-section {
+    background-color: #1a1a1a;
     color: white;
     display: flex;
     flex-direction: column;
@@ -7,14 +7,14 @@
     padding-top: 40px;
 }
 
-h1{
+h1 {
     font-size: 64px;
     text-align: center;
     width: 100vw;
     margin-bottom: 70px;
 }
 
-.skills-container{
+.skills-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@ h1{
     min-width: 60vw;
 }
 
-.skill{
+.skill {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ h1{
     width: 200px;
     height: 80px;
 
-    img{
+    img {
         border-radius: 50%;
         position: absolute;
         left: 0;
@@ -58,44 +58,51 @@ h1{
     }
 }
 
-
-    @media (max-width: 1300px){
-        .skill{
-            width: 140px;
-            height: 40px;
-            font-size: 20px;
-        }
-        .skill-section{
-            font-size: 45px;
-        }
+@media (max-width: 1300px) {
+    .skill {
+        width: 140px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .skill-section {
+        font-size: 45px;
+    }
 }
 
-@media (max-width: 1015px){
-    .skill{
+@media (max-width: 1015px) {
+    .skill {
         width: 130px;
         height: 35px;
-        img{
+        img {
             height: 55px;
         }
     }
 }
 
-@media(max-width: 850px){
-    .skill{
+@media (max-width: 850px) {
+    .skill {
         width: 100px;
         height: 26px;
         font-size: 17px;
     }
 }
 
-@media(max-width: 730px){
-    .skill{
+@media (max-width: 730px) {
+    .skill {
         width: 70px;
         height: 19px;
         font-size: 15px;
 
-        img{
+        img {
             height: 40px;
         }
+    }
+}
+
+@media (max-width: 590px) {
+    .skill {
+        width: 4vw;
+        height: 0vh;
+        font-size: 14px;
     }
 }

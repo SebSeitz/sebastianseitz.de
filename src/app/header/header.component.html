@@ -10,7 +10,7 @@
     </div>
 
     <img (click)="openCloseMenu()" class="dropDown-button" src="assets/img/menu1.png" style="display: none;">
-    <div  *ngIf="menuIsOpen" class="dropDownMenu">
+    <div *ngIf="menuIsOpen" class="dropDownMenu">
         <a routerLink="/">Home</a>
         <a (click)="scroll('#aboutmesection')">About</a>
         <a (click)="scroll('#myworksection')">Portfolio</a>

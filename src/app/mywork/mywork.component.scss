@@ -125,10 +125,17 @@ h1 {
     }
 }
 
-@media(max-width: 730px){
-    .image-row{
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 730px) {
+    .image-row {
+        flex-direction: column;
+        align-items: center;
     }
 
+    .mywork-buttons {
+        margin-left: 10px;
+        button {
+            min-width: 120px;
+            font-size: 14px;
+        }
+    }
 }
