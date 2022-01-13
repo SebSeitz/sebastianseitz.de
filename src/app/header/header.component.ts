@@ -10,9 +10,10 @@ export class HeaderComponent implements OnInit {
   scroll(selector: string) {
     const element = document.querySelector(selector);
     element ? element.scrollIntoView({ behavior: "smooth" }) : null;
+    this.menuIsOpen=false;
   }
 
- menuIsOpen = false;
+  menuIsOpen = false;
  openCloseMenu() {
     if (!this.menuIsOpen) {
       this.menuIsOpen=true;
