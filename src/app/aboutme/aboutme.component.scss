@@ -97,9 +97,16 @@ h1 {
 
     .aboutme-text{
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .image-container{
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-pic{
         margin-right: 0;
     }
 
@@ -111,4 +118,5 @@ h1 {
     .myJourney-container{
         margin-bottom: 20px;
     }
+
 }
