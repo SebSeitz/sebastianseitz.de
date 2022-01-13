@@ -87,3 +87,17 @@ textarea{
     display: flex;
     align-items: flex-end;
 }
+
+@media (max-width: 730px) {
+    form{
+        width: 60vw;
+    }
+
+    .contactform-text{
+        width: 60vw;
+    }
+
+    .contact-button{
+        width: 140px;
+    }
+}
