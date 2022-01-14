@@ -24,13 +24,40 @@
 .introduction-text-container {
     display: flex;
     flex-direction: column;
-    color: white;
     font-size: 45px;
     font-weight: 600;
+    position: relative;
 
     p {
-        font-size: 45px;
+        position: relative;
+        color: black;
+        font-size: 10vw;
         margin-top: 0;
+        -webkit-text-stroke: 0.04vw #fa2759;
+        text-transform: uppercase;
+    }
+    p::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        color: #fa2759;
+        -webkit-text-stroke: 0vw #fa2759;
+        border-right: 2px solid white;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+    }
+}
+
+
+@keyframes animate {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
     }
 }
 
