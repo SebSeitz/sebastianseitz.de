@@ -33,7 +33,7 @@
         color: black;
         font-size: 10vw;
         margin-top: 0;
-        -webkit-text-stroke: 0.04vw #fa2759;
+        -webkit-text-stroke: 0.04vw #2dfcd8;
         text-transform: uppercase;
     }
     p::before {
@@ -43,16 +43,34 @@
         left: 0;
         height: 100%;
         width: 0;
-        color: #fa2759;
-        -webkit-text-stroke: 0vw #fa2759;
+        color: #2dfcd8;
+        -webkit-text-stroke: 0vw #2dfcd8;
         border-right: 2px solid white;
         overflow: hidden;
         animation: animate 6s linear infinite;
+    }
+
+    .p2-element{
+        -webkit-text-stroke: 0.04vw #fa2759;
+    }
+    .p2-element::before{
+        color: #fa2759;
+        -webkit-text-stroke: 0vw #fa2759;
+        animation: animate2 6s linear infinite;
     }
 }
 
 
 @keyframes animate {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90%{
+        width: 84%;
+    }
+}
+
+@keyframes animate2 {
     0%,10%,100% {
         width: 0;
     }
