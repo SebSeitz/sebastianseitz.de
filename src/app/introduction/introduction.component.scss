@@ -189,7 +189,8 @@
     }
 
     .introduction-text-container {
-        min-width: inherit;
+        min-width: -webkit-fill-available;
+        display: block
 
         p {
             min-width: inherit;
@@ -207,7 +208,7 @@
             width: 0;
         }
         70%,90%{
-            width: 46vw;
+            width: 238px;
         }
     }
     @keyframes animate2 {
@@ -215,7 +216,7 @@
             width: 0;
         }
         70%,90%{
-            width: 70vw;
+            width: 282px;
         }
     }
 
