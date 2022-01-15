@@ -29,6 +29,7 @@
             width: 30px;
             background-color: #2dfcd8;
             padding: 15px;
+            animation: imageRotation 5s infinite linear;
         }
         span {
             color: white;
@@ -43,6 +44,15 @@
         }
     }
 }
+
+@keyframes imageRotation {
+    0%{
+        transform: rotateY(0deg);
+      }
+      100%{
+        transform: rotateY(360deg);
+      }
+    }
 
 .profile-pic {
     margin-left: 0;
