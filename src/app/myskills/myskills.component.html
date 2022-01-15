@@ -4,47 +4,57 @@
       </div>
     <div class="skills-container">
         <div class="skills-row">
-            <div class="skill">
+            <div class="skill" (mouseover)="javascriptTip = true" (mouseleave)="javascriptTip = false">
                 <img src="assets/img/javascript.png">
                 Javascript
+                <div class="tool-tip" *ngIf="javascriptTip">Javascript is what adds functions to otherwise mostly static sites</div>
             </div>
-            <div class="skill against">
+
+            <div class="skill against" (mouseover)="angularTip = true" (mouseleave)="angularTip = false">
                 <img src="assets/img/angular.png">
                 Angular
+                <div class="tool-tip tool-tip2" *ngIf="angularTip">Angular is THE Google Framework to create bigger Apps</div>
             </div>
-            <div class="skill">
+            <div class="skill" (mouseover)="HTMLtip = true" (mouseleave)="HTMLtip = false">
                 <img src="assets/img/html.png">
                 HTML CSS
+                <div class="tool-tip" *ngIf="HTMLtip">This is the standard technology to build modern websites</div>
             </div>
         </div>
 
         <div class="skills-row">
-            <div class="skill">
+            <div class="skill" (mouseover)="scrumTip = true" (mouseleave)="scrumTip = false">
                 <img src="assets/img/scrum.png">
                 Scrum
+                <div class="tool-tip" *ngIf="scrumTip">With Scrum, effecient work processes are being organised</div>
             </div>
-            <div class="skill against">
+            <div class="skill against" (mouseover)="gitTip = true" (mouseleave)="gitTip = false">
                 <img src="assets/img/git-icon.png">
                 Git
+                <div class="tool-tip tool-tip2" *ngIf="gitTip">Keep uploading your work to Git for version control</div>
             </div>
-            <div class="skill">
+            <div class="skill" (mouseover)="designTip = true" (mouseleave)="designTip = false">
                 <img src="assets/img/design.png">
                 Design
+                <div class="tool-tip" *ngIf="designTip">While not being a designer I'm aware of how to implement designers' work</div>
             </div>
 
         </div>
         <div class="skills-row">
-            <div class="skill">
+            <div class="skill" (mouseover)="restAPI = true" (mouseleave)="restAPI = false">
                 <img src="assets/img/api.png">
                 Rest API
+                <div class="tool-tip" *ngIf="restAPI">APIs offer services to your software, like access to libraries</div>
             </div>
-            <div class="skill against">
+            <div class="skill against" (mouseover)="databasesTip = true" (mouseleave)="databasesTip = false">
                 <img src="assets/img/database.png">
                 Databases
+                <div class="tool-tip tool-tip2" *ngIf="databasesTip">I also bring at least a basic understanding SQL to the table</div>
             </div>
-            <div class="skill">
+            <div class="skill" (mouseover)="testTip = true" (mouseleave)="testTip = false">
                 <img src="assets/img/accept.png">
                 Test automation
+                <div class="tool-tip" *ngIf="testTip">Adding Features, optimization and constant testing is essential</div>
             </div>
 
         </div>
