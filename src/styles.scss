@@ -13,21 +13,22 @@ body {
   object-fit: cover;
   object-position: top;
   margin-left: 80px;
-  animation: rotate 6s ease-in-out;
+  animation: rotate1 4.7s ease-in-out;
   transform: translateX(0);
   transition: 0.8s all ease-in-out;
 
   &:hover{
-    box-shadow: 4px 4px 45px 15px #a01f3d;;
+    box-shadow: 4px 4px 45px 15px #a01f3d;
+    animation-delay: 0.2s;
   }
 }
 
-@keyframes rotate{
+@keyframes rotate1{
   0%{
     transform: rotateY(0deg);
   }
   100%{
-    transform: rotateY(360deg);
+    transform: rotateY(720deg);
   }
 }
 
@@ -72,7 +73,7 @@ a {
   margin-bottom: 70px;
   font-family: "Clip";
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 60px;
   color: #ffe6ff;
   text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd, -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
     0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
@@ -249,5 +250,12 @@ a {
 @media (max-width: 1300px) {
   h1 {
     font-size: 45px !important;
+  }
+}
+
+@media (max-width: 1080px) {
+  .sign{
+    font-size: 45px;
+
   }
 }
