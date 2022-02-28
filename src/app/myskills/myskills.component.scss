@@ -150,7 +150,15 @@ from {
         img {
             height: 55px;
         }
+
     }
+}
+
+.tool-tip {
+    transform: translateY(30px)
+}
+.tool-tip2{
+    transform: translateY(30px)
 }
 
 @media (max-width: 850px) {

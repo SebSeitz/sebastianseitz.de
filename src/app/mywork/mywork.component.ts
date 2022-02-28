@@ -19,6 +19,10 @@ export class MyworkComponent implements OnInit {
     this.showAll = true;
   }
 
+  goToLink(url: string){
+    window.open(url, "_blank");
+  }
+
   showAngular(){
     this.javascript = false;
     this.showAll = false;
