@@ -8,29 +8,27 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
 
-scroll(selector: string) {
-  const element = document.querySelector(selector);
-  element ? element.scrollIntoView({ behavior: "smooth" }) : null;
-  this.menuIsOpen = false;
-}
-
-menuIsOpen = false;
-openCloseMenu() {
-  if (!this.menuIsOpen) {
-    this.menuIsOpen = true;
-  }
-  else {
+  scroll(selector: string) {
+    const element = document.querySelector(selector);
+    element ? element.scrollIntoView({ behavior: "smooth" }) : null;
     this.menuIsOpen = false;
   }
 
-}
+  menuIsOpen = false;
+  openCloseMenu() {
+    if (!this.menuIsOpen) {
+      this.menuIsOpen = true;
+    }
+    else {
+      this.menuIsOpen = false;
+    }
+  }
 
+  @Input() alternativeMode = true;
 
-@Input() alternativeMode = true;
-constructor() { }
+  constructor() { }
 
-ngOnInit(): void {
+  ngOnInit(): void {
 
-}
-
+  }
 }
