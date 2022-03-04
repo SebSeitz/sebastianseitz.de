@@ -12,11 +12,22 @@ export class IntroductionComponent implements OnInit {
     element ? element.scrollIntoView({behavior: "smooth"}): null;
 }
 
-  constructor() {
+topSection = document.getElementById('topSection');
+  options = {
+  };
 
-  }
+  observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      console.log('look at this entry', entry);
+    });
+  }, this.options);
+
+  constructor() { }
+
+
 
   ngOnInit(): void {
+    this.observer.observe(this.topSection);
   }
 
 }

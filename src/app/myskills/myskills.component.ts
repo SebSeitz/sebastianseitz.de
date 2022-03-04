@@ -15,9 +15,23 @@ export class MyskillsComponent implements OnInit {
   restAPI = false;
   databasesTip = false;
   testTip = false;
+
+  // mySkillsSection = document.getElementById('myskillssection');
+  // options = {
+  // };
+
+  // observer = new IntersectionObserver(function (entries, options) {
+  //   entries.forEach(entry => {
+  //     console.log('look at this entry', entry);
+  //   });
+  // }, this.options);
+
   constructor() { }
 
   ngOnInit(): void {
+    // this.observer.observe(this.mySkillsSection);
   }
-
 }
+
+
+
