@@ -16,20 +16,32 @@ export class MyskillsComponent implements OnInit {
   databasesTip = false;
   testTip = false;
 
-  // mySkillsSection = document.getElementById('myskillssection');
-  // options = {
-  // };
 
-  // observer = new IntersectionObserver(function (entries, options) {
-  //   entries.forEach(entry => {
-  //     console.log('look at this entry', entry);
-  //   });
-  // }, this.options);
+  options = {
+    root: document.querySelector('topSection'),
+    threshold: 0.8,
+    rootMargin: "0px",
+  };
+
+  observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting){
+        return;
+      }
+      console.log('look at my skills', entry.target);
+      entry.target.classList.toggle('flyIn');
+      entry.target.classList.toggle('visible');
+
+      observer.unobserve(entry.target);
+    });
+  }, this.options);
 
   constructor() { }
 
   ngOnInit(): void {
-    // this.observer.observe(this.mySkillsSection);
+     this.observer.observe(document.getElementById('skills-row1'));
+     this.observer.observe(document.getElementById('skills-row2'));
+     this.observer.observe(document.getElementById('skills-row3'));
   }
 }
 

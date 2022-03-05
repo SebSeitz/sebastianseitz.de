@@ -24,8 +24,33 @@ h1 {
     align-items: center;
 }
 
+.flyIn{
+    animation: logo-fly-in 0.7s ease-in-out 0s 1 normal both,
+}
+
+.visible{
+    visibility: visible !important;
+}
+
+
+@keyframes logo-fly-in {
+    0% {
+        opacity: 0;
+        transform: translate(-60vw, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0vw, 0px);
+    }
+}
+
+.changeColor{
+    background-color: #2dfcd8;
+}
+
 .skills-row {
     display: flex;
+    visibility: hidden;
     margin-bottom: 60px;
     min-width: 60vw;
 }

@@ -12,8 +12,12 @@ export class IntroductionComponent implements OnInit {
     element ? element.scrollIntoView({behavior: "smooth"}): null;
 }
 
-// topSection = document.getElementById('topSection');
+topSection = document.getElementById('topSection');
   options = {
+    root: null, //it is the viewport
+    threshold: 0,
+    rootMargin: "-150px",
+
   };
   observer = new IntersectionObserver(function (entries, options) {
     entries.forEach(entry => {
