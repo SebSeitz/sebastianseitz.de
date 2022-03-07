@@ -23,18 +23,11 @@ export class MyskillsComponent implements OnInit {
     rootMargin: "0px",
   };
 
-  observer = new IntersectionObserver(function (entries, observer) {
+  observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if(!entry.isIntersecting){
-        return;
-      }
-      console.log('look at my skills', entry.target);
-      entry.target.classList.toggle('flyIn');
-      entry.target.classList.toggle('visible');
-
-      observer.unobserve(entry.target);
+      entry.target.classList.toggle('flyIn', entry.isIntersecting);
     });
-  }, this.options);
+  }, );
 
   constructor() { }
 
