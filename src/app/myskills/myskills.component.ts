@@ -17,17 +17,17 @@ export class MyskillsComponent implements OnInit {
   testTip = false;
 
 
-  options = {
-    root: document.querySelector('topSection'),
-    threshold: 0.8,
-    rootMargin: "0px",
-  };
+  // options = {
+  //   root: document.querySelector('topSection'),
+  //   threshold: 0.8,
+  //   rootMargin: "0px",
+  // };
 
   observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       entry.target.classList.toggle('flyIn', entry.isIntersecting);
     });
-  }, );
+  });
 
   constructor() { }
 
