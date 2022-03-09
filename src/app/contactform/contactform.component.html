@@ -9,7 +9,7 @@
         <p>
             <label for="firstname">First Name</label>
             <input type="text" #nameRef="ngModel" minlength="4" required
-                placeholder="Enter Your First Name" id="firstname" name="firstname" [(ngModel)]="firstname">
+                placeholder="Enter Your Name" id="firstname" name="firstname" [(ngModel)]="firstname">
         </p>
         <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert">
             <div [hidden]="!nameRef.errors?.['required']">
@@ -21,7 +21,7 @@
         </div>
 
 
-        <p>
+        <!-- <p>
             <label for="lastname">Last Name</label>
             <input type="text" #lastNameRef="ngModel" minlength="4" required
                 placeholder="Enter Your Last Name" id="lastname" name="lastname" [(ngModel)] ="lastname">
@@ -33,7 +33,7 @@
             <div [hidden]="!lastNameRef.errors?.['minlength']">
                 Please enter at least 4 characters
             </div>
-        </div>
+        </div> -->
 
         <p>
             <label for="email">Email </label>
@@ -62,7 +62,7 @@
             <div [hidden]="!refMessage.errors?.['minlength']">
                 Please enter at least 20 characters
             </div>
-            <div [hidden]="!refMessage.errors?.['maxlength']">
+            <div [hidden]="!refMessage.errors?.['maxlength'] || (nameRef.dirty || refEmailPattern.dirty || lastNameRef.dirty)">
                 Character limit reached
             </div>
         </div>

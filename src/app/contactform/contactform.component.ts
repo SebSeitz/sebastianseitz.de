@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class ContactformComponent implements OnInit {
 
   firstname = '';
-  lastname = '';
   email = '';
   message = '';
 
@@ -21,7 +20,6 @@ export class ContactformComponent implements OnInit {
     let url = 'http://sebastian-seitz.developerakademie.com/send_mail.php';
     let formData = new FormData();
     formData.append('firstname', `${this.firstname}`);
-    formData.append('lastname', `${this.lastname}`);
     formData.append('email', `${this.email}`);
     formData.append('message', `${this.message}`);
     let resp = await fetch(url, { method: 'POST' , body: formData});

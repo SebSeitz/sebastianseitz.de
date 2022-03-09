@@ -13,9 +13,9 @@ body {
   object-fit: cover;
   object-position: top;
   margin-left: 80px;
-  animation: rotate1 4.7s ease-in-out;
-  transform: translateX(0);
-  transition: 0.8s all ease-in-out;
+  // animation: rotate1 4.7s ease-in-out;
+  // transform: translateX(0);
+  // transition: 0.8s all ease-in-out;
 
   &:hover{
     box-shadow: 4px 4px 45px 15px #a01f3d;
@@ -23,14 +23,14 @@ body {
   }
 }
 
-@keyframes rotate1{
-  0%{
-    transform: rotateY(0deg);
-  }
-  100%{
-    transform: rotateY(720deg);
-  }
-}
+// @keyframes rotate1{
+//   0%{
+//     transform: rotateY(0deg);
+//   }
+//   100%{
+//     transform: rotateY(720deg);
+//   }
+// }
 
 .contact-button {
   background-color: transparent;
