@@ -47,7 +47,6 @@ h1 {
 
 .skills-row {
     display: flex;
-    // visibility: hidden;
     opacity: 0;
     margin-bottom: 60px;
     min-width: 60vw;
@@ -88,8 +87,8 @@ h1 {
     &:hover {
 
         background-color: #2dfcd8;;
-        animation: rotate 1.5s ease-in-out;
-        transform: rotate(-360deg);
+        // animation: rotate 1.5s ease-in-out;
+        // transform: rotate(-360deg);
         cursor:cell;
     }
 }
@@ -108,7 +107,7 @@ h1 {
     padding-top: 12px;
     padding-left: 4px;
     padding-right: 4px;
-    animation: extend 2s ease-in-out;
+    animation: extend 300ms ease-in-out;
     opacity: 0.65;
     z-index: 2;
 }
@@ -130,28 +129,28 @@ from {
 
 .against:hover {
     background-color: #fa2759;
-    transform: rotate(360deg);
+    // transform: rotate(360deg);
 }
 
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
+// @keyframes rotate{
+//     0%{
+//         transform: rotate(0deg);
+//     }
 
-    25%{
-        transform: rotate(15deg);
-    }
+//     25%{
+//         transform: rotate(15deg);
+//     }
 
-    50%{
-        transform:  rotate(-15deg);
-    }
-    75%{
-        transform: rotate(15deg);
-    }
-    100%{
-        transform: rotate(0);
-    }
-}
+//     50%{
+//         transform:  rotate(-15deg);
+//     }
+//     75%{
+//         transform: rotate(15deg);
+//     }
+//     100%{
+//         transform: rotate(0);
+//     }
+// }
 
 
 
