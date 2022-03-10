@@ -3,22 +3,22 @@
         <span class="fast-flicker">M</span>y<span class="flicker">W</span>ork
       </div>
 
-    <div class="mywork-buttons">
+    <div class="mywork-buttons" id="mywork-buttons">
         <button (click)="showAllWorks()">All</button>
         <button (click)="showAngular()">Angular</button>
         <button (click)="showJavascript()">Javascript</button>
     </div>
 
-    <div class="preview-container">
+    <div class="preview-container" id="preview-container">
 
-        <div class="image-row">
-            <div class="row" *ngIf="javascript || showAll" (mouseover)="hoverOver = true && showQuiz = true" (mouseleave)="hoverOver = false" (mouseleave)= "showQuiz = false">
+        <div class="image-row" id="image-row">
+            <div class="row row1" *ngIf="javascript || showAll" (mouseover)="hoverOver = true && showQuiz = true" (mouseleave)="hoverOver = false" (mouseleave)= "showQuiz = false">
                 <div class="tryOut" *ngIf="hoverOver && showQuiz">Quizz App
                     <a href="#">Try it out</a>
                 </div>
                 <img [class.transparent]="hoverOver && showQuiz" *ngIf="javascript || showAll" src="assets/img/quizzapp.png">
             </div>
-            <div class="row" *ngIf="javascript || showAll" (mouseover)="hoverOver = true && showGame = true" (mouseleave)="hoverOver = false" (mouseleave) ="showGame = false">
+            <div class="row row2" *ngIf="javascript || showAll" (mouseover)="hoverOver = true && showGame = true" (mouseleave)="hoverOver = false" (mouseleave) ="showGame = false">
                 <div class="tryOut" *ngIf="hoverOver && showGame">Jump and Run Game
                     <a (click)="goToLink('./el%20pollo%20loco/index.html')">Try it out</a>
                 </div>
@@ -27,14 +27,14 @@
         </div>
 
 
-        <div class="image-row">
-            <div class="row" *ngIf="javascript || showAll" (mouseover)="hoverOver = true && showPokedex =true" (mouseleave)="hoverOver = false" (mouseleave)="showPokedex = false">
+        <div class="image-row" id="image-row2">
+            <div class="row row3" *ngIf="javascript || showAll" (mouseover)="hoverOver = true && showPokedex =true" (mouseleave)="hoverOver = false" (mouseleave)="showPokedex = false">
                 <div class="tryOut" *ngIf="hoverOver && showPokedex">API based Pokedex
                     <a href="pokedex/pokedex.html">Try it out</a>
                 </div>
                 <img [class.transparent]="hoverOver && showPokedex"  src="assets/img/pokedex.png">
             </div>
-            <div class="row" *ngIf="!javascript || showAll" (mouseover)="hoverOver = true && showMusicApp = true" (mouseleave)="hoverOver = false" (mouseleave)="showMusicApp = false">
+            <div class="row row4" *ngIf="!javascript || showAll" (mouseover)="hoverOver = true && showMusicApp = true" (mouseleave)="hoverOver = false" (mouseleave)="showMusicApp = false">
                 <div class="tryOut" *ngIf="hoverOver && showMusicApp">Ring of Fire
                     <a href="#">Try it out</a>
                 </div>

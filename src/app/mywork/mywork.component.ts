@@ -33,12 +33,19 @@ export class MyworkComponent implements OnInit {
     this.showAll = false
   }
 
+  observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('box-animation', entry.isIntersecting);
+    });
+  });
+
 
   constructor() {
 
   }
 
   ngOnInit(): void {
+    this.observer.observe(document.getElementById('image-row'));
+    this.observer.observe(document.getElementById('image-row2'));
   }
-
 }
