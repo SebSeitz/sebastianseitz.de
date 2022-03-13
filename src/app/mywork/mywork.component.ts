@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyworkComponent implements OnInit {
   javascript = true;
   showAll = true;
+  angular = true;
   hoverOver = false;
   showQuiz = false;
   showGame = false;
@@ -16,7 +17,11 @@ export class MyworkComponent implements OnInit {
 
 
   showAllWorks(){
+    this.angular = false;
+    this.javascript = false;
     this.showAll = true;
+    // document.getElementById('row4').classList.remove('box-animation');
+    // document.getElementById('preview-container').classList.add('box-animation');
   }
 
   goToLink(url: string){
@@ -24,13 +29,18 @@ export class MyworkComponent implements OnInit {
   }
 
   showAngular(){
+    this.angular = true;
     this.javascript = false;
     this.showAll = false;
+    // document.getElementById('preview-container').classList.remove('box-animation');
+    // document.getElementById('row4').classList.add('box-animation');
   }
 
   showJavascript(){
     this.javascript = true;
-    this.showAll = false
+    this.showAll = false;
+    this.angular = false;
+    // document.getElementById('preview-container').classList.remove('box-animation');
   }
 
   observer = new IntersectionObserver(entries => {

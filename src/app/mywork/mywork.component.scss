@@ -1,6 +1,7 @@
 .mywork-section {
     padding-top: 40px;
     padding-bottom: 80px;
+    min-height: 110vh;
 }
 h1 {
     color: white;
@@ -80,16 +81,16 @@ h1 {
 
 }
 .row1{
-    animation-delay: 0;
-}
-.row2{
     animation-delay: 100ms;
 }
+.row2{
+    animation-delay: 150ms !important;
+}
 .row3{
-    animation-delay: 200ms;
+    animation-delay: 200ms !important;
 }
 .row4{
-    animation-delay: 300ms;
+    animation-delay: 250ms !important;
 }
 
 @keyframes fadein{
